@@ -1,12 +1,13 @@
 
 import { Title, Container, Form, ContainerInputs, Input, Button, TopBackground, InputLabel } from "./styles.js"
-
+import UserImage from "./assets/users.png"
+import TrashImage from "./assets/trash.svg"
 function App() {
 
   return (
     <Container>
       <TopBackground>
-        <img src="" alt="" />
+        <img src={UserImage} alt="icone-usuarios" />
       </TopBackground>
 
       <Form>
