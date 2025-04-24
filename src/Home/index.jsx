@@ -1,0 +1,49 @@
+import { useRef } from "react"
+import { Title, Container, Form, ContainerInputs, Input, Button, TopBackground, InputLabel } from "./styles"
+import UserImage from "../../src/assets/users.png"
+import TrashImage from "../../src/assets/trash.svg"
+function Home() {
+
+  const inputName = useRef()
+  const inputAge = useRef()
+  const inputEmail = useRef()
+const registerNewUser = () => {
+  console.log(inputName.current.value)
+}
+
+  return (
+    <Container>
+      <TopBackground>
+        <img src={UserImage} alt="icone-usuarios" />
+      </TopBackground>
+
+      <Form>
+        <Title>Cadastrar Usuario</Title>
+
+        <ContainerInputs>
+
+          <div>
+            <InputLabel>Nome:<span> *</span> </InputLabel>
+            <Input type="text" placeholder="Nome do usuário" ref={inputName} />
+          </div>
+
+          <div>
+            <InputLabel>Idade:<span> *</span> </InputLabel>
+            <Input type="number" placeholder="Idade" ref={inputAge}/>
+          </div>
+
+        </ContainerInputs>
+
+        <div style={{ width: '100' }}>
+          <InputLabel>Email:<span> *</span> </InputLabel>
+          <Input type="email" placeholder="Email" ref={inputEmail}/>
+        </div>
+
+        <Button type="button" onClick={registerNewUser}>Cadastrar Usuário </Button>
+      </Form>
+
+    </Container>
+  )
+}
+
+export default Home

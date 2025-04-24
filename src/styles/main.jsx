@@ -1,11 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { GlobalStyles } from './assets/GlobalStyles.js'
-import App from './App.jsx'
+import { GlobalStyles } from '../assets/GlobalStyles'
+import Home from '../Home'
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <Home />
     <GlobalStyles />
   </StrictMode>,
 )
