@@ -46,51 +46,34 @@ export const InputLabel = styled.label`
     }
 `
 
-export const Button = styled.button`
-    font-size: 16px;
-    color:white;
-    border: none;
-    width:fit-content;
-    padding:16px 32px;
-    border-radius:25px;
-    cursor: pointer;
-    background:linear-gradient(50deg,rgb(58, 158, 180) 0%,
-     rgba(253, 29, 29, 1) 30%, rgba(252, 176, 69, 1) 100%);
-     &:hover{
-         opacity:0.8;
-     }
-     &:active{
-        opacity:0.6;
-     }
-     `
-export const TopBackground = styled.div`
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    background: linear-gradient(to right,#fe6d50,#58273d);
-    border-radius:30px;
-    height:30vh;
-    width:90vw;
-    max-width:40vw;
-    max-height:30vh;
+// export const TopBackground = styled.div`
+//     display:flex;
+//     align-items:center;
+//     justify-content: center;
+//     background: linear-gradient(to right,#fe6d50,#58273d);
+//     border-radius:30px;
+//     height:30vh;
+//     width:90vw;
+//     max-width:40vw;
+//     max-height:30vh;
 
-    @media screen and (max-width: 600px) {
-        max-width:100vw;
-        max-height:30vh;
-    }
-    @media screen and (max-width: 1500px) {
-        max-width:100vw;
-        max-height:30vh;
-    }
+//     @media screen and (max-width: 600px) {
+//         max-width:100vw;
+//         max-height:30vh;
+//     }
+//     @media screen and (max-width: 1500px) {
+//         max-width:100vw;
+//         max-height:30vh;
+//     }
 
-    img{
-        max-width:100%;
-        max-height:100%;
+//     img{
+//         max-width:100%;
+//         max-height:100%;
 
-        @media screen and (max-width: 600px)  {
-        max-width:70vw;
-        max-height:30vh;
+//         @media screen and (max-width: 600px)  {
+//         max-width:70vw;
+//         max-height:30vh;
         
-    }
-}
-   `
+//     }
+// }
+//    `

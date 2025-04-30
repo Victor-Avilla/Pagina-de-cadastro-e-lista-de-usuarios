@@ -1,10 +1,11 @@
-import { Button } from '../../pages/Home/styles'
-import {DefaultButton} from './styles'
-
-const DefaultButton =()=>{
-    renderToString(
-        <Button>Enviar</Button>
+import { Button } from './styles'
+import PropTypes from 'prop-types'
+const DefaultButton = ({ children, ...props }) => {
+    return (
+        <Button {...props}>{children}</Button>
     )
 }
-
+DefaultButton.propTypes = {
+    children: PropTypes.node.isRequired
+}
 export default DefaultButton

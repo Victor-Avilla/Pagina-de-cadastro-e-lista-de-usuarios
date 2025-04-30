@@ -1,8 +1,10 @@
 import { useRef } from "react"
 import api from "../../services/api"
-import { Title, Container, Form, ContainerInputs, Input, Button, TopBackground, InputLabel } from "./styles"
-import UserImage from "../../../src/assets/users.png"
-import TrashImage from "../../../src/assets/trash.svg"
+import { Title, Container, Form, ContainerInputs, Input, InputLabel } from "./styles"
+import TopBackground from "../../components/TopBackground"
+
+// import TrashImage from "../../../src/assets/trash.svg"
+import Button from "../../components/Button"
 function Home() {
 
   const inputName = useRef()
@@ -20,9 +22,8 @@ function Home() {
 
   return (
     <Container>
-      <TopBackground>
-        <img src={UserImage} alt="icone-usuarios" />
-      </TopBackground>
+      <TopBackground />
+
 
       <Form>
         <Title>Cadastrar Usuario</Title>
