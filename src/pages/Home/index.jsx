@@ -1,6 +1,6 @@
 import { useRef } from "react"
 import api from "../../services/api"
-import { useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { Title, Container, Form, ContainerInputs, Input, InputLabel } from "./styles"
 import TopBackground from "../../components/TopBackground"
 
@@ -13,16 +13,25 @@ function Home() {
   const inputEmail = useRef()
 
   const navigate = useNavigate()
-  async function registerNewUser() {
+ 
+    async function registerNewUser() {
+      try {
+        const data = await api.post('/usuarios', {
+          name: inputName.current.value,
+          age: parseInt(inputAge.current.value),
+          email: inputEmail.current.value
+        })
+        alert("Cadastro realizado com sucesso. Bem vindo(a) " + data.data.name)
 
-    const data = await api.post('/usuarios', {
-      name: inputName.current.value,
-      age: parseInt(inputAge.current.value),
-      email: inputEmail.current.value
-    })
-    console.log(data)
-  }
-
+      } catch (error) {
+        if (error.response && error.response.status === 400) {
+          alert("Cadastro negado, você é menor de idade")
+        } else {
+          alert("Erro ao cadastrar usuário")
+        } 
+      }
+    }
+  
   return (
     <Container>
       <TopBackground />
@@ -52,7 +61,7 @@ function Home() {
 
         <Button type="button" onClick={registerNewUser} theme="primary">Cadastrar Usuário </Button>
 
-        <Button type="button" onClick={()=>navigate("/listagem-de-usuarios")}>Ver Lista de Usuários </Button>
+        <Button type="button" onClick={() => navigate("/listagem-de-usuarios")}>Ver Lista de Usuários </Button>
       </Form>
 
     </Container>
