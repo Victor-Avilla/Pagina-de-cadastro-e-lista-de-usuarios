@@ -1,6 +1,11 @@
 # Página de Cadastro e Lista de Usuários
 
-Aplicação fullstack para cadastro, listagem e remoção de usuários, desenvolvida com **React** (frontend) e **Node.js/Express** + **Prisma** (backend). O backend utiliza IDs aleatórios (string) e validação de maioridade no cadastro. Projeto focado em componentização, integração com APIs REST, organização de código e responsividade.
+Aplicação fullstack para cadastro, listagem e remoção de usuários, desenvolvida com **React** (frontend) e **Node.js/Express** + **Prisma** (backend). O backend utiliza IDs aleatórios e validação de maioridade no cadastro. Projeto focado em componentização, integração com APIs REST, organização de código e responsividade.
+
+⚠️ **Esta versão está publicada apenas com o front-end funcional. O back-end está conectado a um banco de dados local e não está disponível na versão online, servindo apenas para fins demonstrativos.**  
+
+🔗 **Visualize o projeto online (deploy feito no Vercel):** [https://pagina-de-cadastro-e-lista-git-bd1d14-victors-projects-86a43880.vercel.app?_vercel_share=Ay3AOGQmWS7ZwwpgqZRmdbCeiQKnZwoK](https://pagina-de-cadastro-e-lista-git-bd1d14-victors-projects-86a43880.vercel.app?_vercel_share=Ay3AOGQmWS7ZwwpgqZRmdbCeiQKnZwoK)
+
 
 ## Imagens
 
@@ -32,7 +37,7 @@ Versão mobile:
   - Node.js
   - Express
   - Prisma ORM
-  - Banco de Dados (ex: SQLite, PostgreSQL)
+  - Banco de Dados (Mongo Db)
 
 ## Estrutura do Projeto
 
@@ -53,48 +58,6 @@ Versão mobile:
 - Geração automática de avatares para cada usuário cadastrado utilizando a [API UI Avatars](https://ui-avatars.com/).
 - Navegação entre páginas de cadastro e listagem com React Router DOM.
 - Componentização e estilização dinâmica com styled-components.
+  
+⚠️ **Backend disponível apenas localmente** – a versão em produção contém apenas o front-end visual.
 
-## Instalação e Execução
-
-### 1. Clone o repositório
-
-```sh
-git clone https://github.com/Victor-Avilla/Pagina-de-cadastro-e-lista-de-usuarios.git
-cd Pagina-de-cadastro-e-lista-de-usuarios
-```
-
-### 2. Instale as dependências do backend
-
-```sh
-cd backend
-npm install
-```
-
-### 3. Configure o banco de dados e rode as migrations do Prisma
-
-```sh
-npx prisma migrate dev
-```
-
-### 4. Inicie o backend
-
-```sh
-npm run dev
-```
-O backend rodará em `http://localhost:3000`
-
-### 5. Instale as dependências do frontend
-
-```sh
-cd ../ # volte para a raiz, se necessário
-npm install
-```
-
-### 6. Inicie o frontend
-
-```sh
-npm run dev
-```
-O frontend rodará em `http://localhost:5173`
-
----
