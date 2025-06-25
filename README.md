@@ -41,9 +41,9 @@ Versão mobile:
 
 ## Estrutura do Projeto
 
-- `/src`: Código-fonte do frontend (componentes, páginas, lógica de cadastro/listagem de usuários).
-- `/public`: Arquivos estáticos do frontend.
-- `/backend` (ou raiz): Código-fonte do backend (Express, Prisma, rotas).
+- `/src`: Código fonte do frontend (componentes, páginas, lógica de cadastro/listagem de usuários).
+- `/public`: Arquivos do frontend.
+- `/backend`: Código-fonte do backend (Express, Prisma, rotas).
 - `package.json`: Gerenciamento de dependências e scripts.
 - `vite.config.js`: Configuração do Vite.
 - `prisma/schema.prisma`: Configuração do banco de dados.
